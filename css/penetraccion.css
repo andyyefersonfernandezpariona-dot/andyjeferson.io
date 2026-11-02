@@ -1,0 +1,341 @@
+
+:root {
+    --green: #11cc33;
+    --cyan: #1fe44d;
+    --bg: #0a0c0f;
+    --card: #e8ecf0;
+    --text: #eaf2f7;
+    --muted: #a7b5c1;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Courier New", monospace;
+    overflow-x: hidden;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      linear-gradient(#39ff8809 1px, transparent 1px),
+      linear-gradient(90deg, #39ff8809 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 8%;
+    border-bottom: 1px solid #39ff8830;
+    background: #070b10ee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+  }
+  
+  .logo {
+    color: var(--green);
+    font-size: 1.35rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 0 12px #39ff8870;
+  }
+  
+  nav {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--text);
+    transition: color .3s;
+  }
+  
+  nav a:hover {
+    color: var(--green);
+  }
+  
+  .hero {
+    min-height: 82vh;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .tag {
+    color: var(--green);
+    border: 1px solid var(--green);
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    animation: pulse 2s infinite;
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 1.08;
+    margin-bottom: 25px;
+  }
+  
+  h1 span,
+  .section-title span,
+  footer span {
+    color: var(--green);
+  }
+  
+  h1 span {
+    text-shadow: 0 0 25px #07dffc45;
+  }
+  
+  .hero > p,
+  .cta p {
+    max-width: 650px;
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 14px 22px;
+    font-family: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid var(--green);
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .btn-primary {
+    background: var(--green);
+    color: #061009;
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: var(--green);
+  }
+  
+  .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 22px #39ff8845;
+  }
+  
+  section {
+    padding: 80px 8%;
+    scroll-margin-top: 90px;
+  }
+  
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    margin-bottom: 15px;
+  }
+  
+  .subtitle {
+    color: #9aabb8;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    max-width: 750px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+  }
+  
+  .card {
+    background: linear-gradient(145deg, #111c25, #0b1117);
+    border: 1px solid #39ff8825;
+    border-radius: 10px;
+    padding: 28px;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .6s, transform .6s, border-color .3s,
+                box-shadow .3s;
+  }
+  
+  .card.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card.show:hover {
+    transform: translateY(-7px);
+    border-color: var(--green);
+    box-shadow: 0 10px 35px #39ff8812;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .card h3,
+  .step h3 {
+    color: var(--green);
+    margin-bottom: 14px;
+  }
+  
+  .card p,
+  .step p {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: .95rem;
+  }
+  
+  .steps {
+    border-left: 2px solid var(--green);
+    padding-left: 28px;
+    margin-left: 8px;
+  }
+  
+  .step {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  
+  .step::before {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--green);
+  }
+  
+  .terminal {
+    background: #05090c;
+    border: 1px solid #39ff8850;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 35px #39ff8810;
+  }
+  
+  .terminal-head {
+    padding: 14px 18px;
+    background: #142019;
+    color: var(--green);
+    border-bottom: 1px solid #39ff8830;
+  }
+  
+  .terminal-head span {
+    color: #ff6b6b;
+  }
+  
+  .terminal-body {
+    padding: 25px;
+    min-height: 220px;
+    line-height: 2;
+    color: #c0d1c8;
+    overflow-wrap: anywhere;
+  }
+  
+  .green {
+    color: var(--green);
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 9px;
+    height: 17px;
+    background: var(--green);
+    animation: blink .8s infinite;
+    vertical-align: middle;
+  }
+  
+  .cta {
+    text-align: center;
+    background: radial-gradient(
+      ellipse at center, #123022 0%, #070b10 70%
+    );
+    border-top: 1px solid #39ff8820;
+    border-bottom: 1px solid #39ff8820;
+  }
+  
+  .cta p {
+    margin: 20px auto;
+  }
+  
+  footer {
+    padding: 30px 8%;
+    text-align: center;
+    color: #758591;
+    font-size: .85rem;
+    line-height: 2;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 transparent; }
+    50% { box-shadow: 0 0 15px #39ff8830; }
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  
+  @media (max-width: 650px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    nav {
+      gap: 14px;
+      justify-content: center;
+      font-size: .85rem;
+    }
+  
+    .hero {
+      min-height: 70vh;
+      padding-top: 75px;
+    }
+  
+    section {
+      padding: 60px 6%;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: .01ms !important;
+      scroll-behavior: auto !important;
+      transition-duration: .01ms !important;
+    }
+  
+    .card {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  

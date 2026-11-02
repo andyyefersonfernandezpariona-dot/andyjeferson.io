@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050705;
+    color: #efecec;
+    padding: 20px;
+}
+
+.registro {
+    width: 100%;
+    max-width: 400px;
+    background: #0c0f0c;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #16a34a;
+    border-top: 5px solid #16a34a;
+    box-shadow: 0 0 25px rgba(22, 163, 74, 0.20);
+}
+
+/* IMAGEN DE GLEN RADARS */
+
+.glen {
+    height: 190px;
+    width: 100%;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.05),
+            #0c0f0c
+        ),
+        url("../img/glen-radars.jpeg");
+
+    background-size: cover;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* TITULO */
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #f8f6f6;
+}
+
+h1 span {
+    color: #16a34a;
+}
+
+.descripcion {
+    text-align: center;
+    color: #888;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* FORMULARIO */
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    background: #171c17;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 2px rgba(22,163,74,0.2);
+}
+
+/* BOTON */
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0b0c0b;
+    border: 1px solid #16a34a;
+    color: #16a34a;
+}
+
+/* MENSAJES */
+
+.mensaje {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #16a34a;
+}
+
+.login {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
+
+.login a {
+    color: #16a34a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}

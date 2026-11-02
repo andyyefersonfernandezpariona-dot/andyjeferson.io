@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aprende sobre pruebas de penetración y ciberseguridad.">
+  <title>CyberSec | Pentesting</title>
+  <link rel="stylesheet" href="./css/penetraccion.css">
+  <script src="./js/penetracion.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#inicio" class="logo">[ CYBERSEC ]</a>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#conceptos">Conceptos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="./html/registro.html">registro</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="tag">● CIBERSEGURIDAD / ETHICAL HACKING</div>
+
+      <h1>Pruebas de<br><span>Penetración_</span></h1>
+
+      <p>
+        Las pruebas de penetracción tambien llamado Pentesting descubre vulnerabilidades antes que los atacantes.
+        
+        Aprende a evaluar sistemas, identificar riesgos y
+        fortalecer la seguridad informática.
+      </p>
+
+      <div class="buttons">
+        <a href="#conceptos" class="btn btn-primary">
+          Explorar contenido →
+        </a>
+        <a href="#laboratorio" class="btn btn-secondary">
+          Ver laboratorio
+        </a>
+      </div>
+    </section>
+
+    <section id="conceptos">
+      <h2 class="section-title">
+        ¿Qué es el <span>Pentesting?</span>
+      </h2>
+      <p class="subtitle">
+        El pentesting es una prueba de seguridad informática que simula ataques para encontrar vulnerabilidades.
+Su objetivo es identificar fallos antes de que sean aprovechados por ciberdelincuentes.
+Se realiza en redes, servidores, páginas web y aplicaciones.
+Utiliza herramientas como Nmap, Metasploit y Burp Suite.
+El proceso incluye reconocimiento, escaneo, explotación, mantenimiento del acceso y elaboración de un informe.
+Los resultados permiten corregir vulnerabilidades y mejorar la seguridad de los sistemas.
+El pentesting debe realizarse siempre con autorización del propietario del sistema.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🛡️</div>
+          <h3>Seguridad ofensiva</h3>
+          <p>
+            Simulación controlada de ataques para comprobar
+            las defensas de una organización.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🔎</div>
+          <h3>Análisis de vulnerabilidades</h3>
+          <p>
+            Identificación de configuraciones incorrectas,
+            fallos y posibles riesgos de seguridad.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🌐</div>
+          <h3>Pruebas web</h3>
+          <p>
+            Evaluación de aplicaciones web, autenticación,
+            permisos y controles de acceso.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">📋</div>
+          <h3>Informes</h3>
+          <p>
+            Documentación de hallazgos, impacto y medidas
+            para solucionar las vulnerabilidades.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <h2 class="section-title">
+        Fases del <span>Pentesting</span>
+      </h2>
+      <p class="subtitle">
+        Una metodología ordenada, segura y autorizada.
+      </p>
+
+      <div class="steps">
+        <article class="step">
+          <h3>01. Planificación</h3>
+          <p>Consiste en recopilar información sobre el objetivo antes de realizar las pruebas. Se identifican dominios, direcciones IP y tecnologías utilizadas.
+            Ejemplo: Investigar el dominio y la información pública de una empresa con autorización</p>
+        </article>
+
+        <article class="step">
+          <h3>02. Reconocimiento</h3>
+          <p>Se analizan los sistemas para identificar puertos abiertos, servicios activos y posibles vulnerabilidades. Se pueden utilizar herramientas como Nmap.
+            Ejemplo: Detectar que un servidor tiene abierto el puerto 80, utilizado normalmente para HTTP</p>
+        </article>
+
+        <article class="step">
+          <h3>03. Análisis</h3>
+          <p>Consiste en comprobar si una vulnerabilidad puede aprovecharse para acceder a un sistema o afectar su funcionamiento. Debe realizarse con autorización y bajo condiciones controladas.
+            Ejemplo: Verificar en un laboratorio si una aplicación web es vulnerable a una inyección SQL</p>
+        </article>
+
+        <article class="step">
+          <h3>04. Validación</h3>
+          <p>Se comprueba si una vulnerabilidad permitiría conservar el acceso al sistema, simulando las acciones de un atacante. En un pentesting autorizado, se evita dejar accesos persistentes innecesarios.
+            Ejemplo: Evaluar en una máquina virtual si una cuenta con permisos insuficientes puede obtener privilegios mayores.</p>
+        </article>
+
+        <article class="step">
+          <h3>05. Informe</h3>
+          <p>Se documentan los resultados de las pruebas, las vulnerabilidades encontradas y el nivel de riesgo. También se proponen medidas para corregir los problemas detectados.
+            Ejemplo: Elaborar un informe que recomiende actualizar un servicio vulnerable y configurar correctamente el firewall.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="laboratorio">
+      <h2 class="section-title">
+        Terminal <span>Interactiva</span>
+      </h2>
+      <p class="subtitle">
+        Demostración educativa. No ejecuta ataques reales
+        ni escanea redes.
+      </p>
+
+      <div class="terminal">
+        <div class="terminal-head">
+          <span>●</span> <span>●</span> <span>●</span>
+          &nbsp; cybersec@lab:~
+        </div>
+        <div class="terminal-body" id="terminal" aria-live="polite">
+          <p><span class="green">root@cybersec:~$</span> iniciar-laboratorio</p>
+          <p>Inicializando entorno educativo...</p>
+          <p class="green">[OK] Laboratorio simulado preparado.</p>
+          <p>Selecciona una opción para continuar.</p>
+          <span class="cursor"></span>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-primary" data-mode="recon">
+          Reconocimiento
+        </button>
+        <button class="btn btn-secondary" data-mode="audit">
+          Auditoría
+        </button>
+        <button class="btn btn-secondary" data-mode="report">
+          Generar informe
+        </button>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2 class="section-title">
+        Protege. <span>Evalúa.</span> Mejora.
+      </h2>
+      <p>
+        Aprende ciberseguridad, practica en laboratorios
+        autorizados y transforma los hallazgos en mejoras.
+      </p>
+      <a
+        class="btn btn-primary"
+        href="https://owasp.org/www-project-web-security-testing-guide/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Consultar guía OWASP ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 <span>CYBERSEC</span> — Educación en ciberseguridad.</p>
+    <p>Evalúa únicamente sistemas con autorización.</p>
+  </footer>
+
+</body>
+</html>
